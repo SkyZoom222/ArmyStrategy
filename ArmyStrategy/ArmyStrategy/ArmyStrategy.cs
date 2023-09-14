@@ -23,7 +23,7 @@ namespace ArmyStrategy.ArmyStrategy
     internal class ArmyStrategy
     {
 
-
+        public static Map GameMap;
 
 
 

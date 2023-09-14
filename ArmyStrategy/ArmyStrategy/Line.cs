@@ -6,7 +6,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarLine
+namespace ArmyStrategy
 {
     internal class Line
     {
@@ -20,10 +20,10 @@ namespace CarLine
 
 
 
-        public Line(Point point1, Point point2) 
+        public Line(Vector2 point1, Vector2 point2) 
         {
-            this.point1 = point1.ToVector2();
-            this.point2 = point2.ToVector2();
+            this.point1 = point1;
+            this.point2 = point2;
         }
         public Line(int x1, int y1, int x2, int y2)
         {
