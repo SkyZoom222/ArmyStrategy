@@ -1,16 +1,16 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace Industrial_Factory
+namespace ArmyStrategy.ArmyStrategy
 {
-    internal class Camera
+    public class Camera
     {
         public Matrix Transform { get; private set; }
 
-        public void Follow(Player target)
+        public void Follow(Rectangle target)
         {
             var position = Matrix.CreateTranslation(
-                -target.pos.Location.X - (target.pos.Size.X / 2) + target.Px,
-                -target.pos.Location.Y - (target.pos.Size.Y / 2) + target.Py,
+                -target.Location.X - (target.Size.X / 2),
+                -target.Location.Y - (target.Size.Y / 2),
                 0);
 
             var offset = Matrix.CreateTranslation(
