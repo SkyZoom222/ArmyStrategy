@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using ArmyStrategy.ArmyStrategy;
+using Org.XmlPull.V1;
 
 namespace ArmyStrategy
 {
@@ -9,10 +11,16 @@ namespace ArmyStrategy
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
+        public static int ScreenH, ScreenW;
+
+
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            ScreenH = _graphics.PreferredBackBufferHeight;
+            ScreenW = _graphics.PreferredBackBufferWidth;
             IsMouseVisible = true;
         }
 
@@ -43,9 +51,9 @@ namespace ArmyStrategy
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.White);
+            _spriteBatch.Begin();
 
-            // TODO: Add your drawing code here
-
+            _spriteBatch.End();
             base.Draw(gameTime);
         }
     }

@@ -9,5 +9,6 @@ namespace ArmyStrategy.ArmyStrategy
     internal class Unit
     {
         int damage;
+
     }
 }
