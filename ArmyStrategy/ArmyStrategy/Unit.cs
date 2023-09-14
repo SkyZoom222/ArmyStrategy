@@ -9,6 +9,7 @@ namespace ArmyStrategy.ArmyStrategy
 {
     internal class Unit
     {
+<<<<<<< HEAD
         int damage { get; }
         int hp;
         string type;
@@ -45,6 +46,9 @@ namespace ArmyStrategy.ArmyStrategy
         {
             return new Unit(hp, damage, armor, speed, visibility_range, point);
         }
+=======
+        int damage;
+>>>>>>> cb9d6d36bb032fb3521deea877e07194d70845b6
 
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StackApp
+namespace ArmyStrategy.ArmyStrategy
 {
-    internal class MyQueue<T>
+    internal class Queue<T>
     {
         T[] _data;
         int _capacity;
@@ -37,7 +37,7 @@ namespace StackApp
         }
 
 
-        public MyQueue(int cap)
+        public Queue(int cap)
         {
             _capacity = cap;
             _data = new T[cap];
