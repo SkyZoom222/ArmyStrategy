@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArmyStrategy.ArmyStrategy
+namespace StrategyGame.ArmyStrategy
 {
     internal class Map
     {

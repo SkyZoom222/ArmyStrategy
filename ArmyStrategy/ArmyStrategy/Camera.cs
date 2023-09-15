@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace ArmyStrategy.ArmyStrategy
+namespace StrategyGame.ArmyStrategy
 {
     public class Camera
     {

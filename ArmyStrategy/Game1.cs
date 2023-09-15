@@ -1,10 +1,11 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using ArmyStrategy.ArmyStrategy;
+using ArmyStrategy;
 using Org.XmlPull.V1;
+using Microsoft.Xna.Framework.Input.Touch;
 
-namespace ArmyStrategy
+namespace StrategyGame
 {
     public class Game1 : Game
     {
@@ -13,7 +14,7 @@ namespace ArmyStrategy
 
         public static int ScreenH, ScreenW;
 
-
+        static ArmyStrategy.ArmyStrategy CurrentGame;
 
         public Game1()
         {
@@ -26,7 +27,7 @@ namespace ArmyStrategy
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            CurrentGame = new ArmyStrategy.ArmyStrategy();
 
             base.Initialize();
         }
@@ -35,15 +36,11 @@ namespace ArmyStrategy
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
         }
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-
-            // TODO: Add your update logic here
+            TouchIn();
 
             base.Update(gameTime);
         }
@@ -55,6 +52,24 @@ namespace ArmyStrategy
 
             _spriteBatch.End();
             base.Draw(gameTime);
+        }
+
+
+
+        private void TouchIn()
+        {
+            var touches = TouchPanel.GetState();
+
+            TouchLocation prevLoc;
+            Vector2 delta;
+            foreach (var touch in touches)
+            {
+                if (!touch.TryGetPreviousLocation(out prevLoc)) continue;
+
+                delta = touch.Position - prevLoc.Position;
+
+
+            }
         }
     }
 }

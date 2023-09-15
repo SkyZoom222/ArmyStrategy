@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArmyStrategy.ArmyStrategy
+namespace StrategyGame.ArmyStrategy
 {
 
     internal class Team
@@ -36,6 +36,8 @@ namespace ArmyStrategy.ArmyStrategy
         {
             _teamColor = color;
             _teamType = type;
+
+            _units.Add(new Unit(10,10,10,10,10,new Vector2(0,0)));
         }
 
 

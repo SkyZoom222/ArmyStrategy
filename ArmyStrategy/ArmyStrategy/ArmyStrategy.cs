@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArmyStrategy.ArmyStrategy
+namespace StrategyGame.ArmyStrategy
 {
 
     public enum Type
@@ -25,12 +25,17 @@ namespace ArmyStrategy.ArmyStrategy
 
         public static Map GameMap;
 
-
+        public static Team Team1;
 
 
         public ArmyStrategy()
         {
+            Team1 = new Team(Color.Red, Team.Type.People, 10000);
+        }
 
+        public void Update()
+        {
+            
         }
     }
 }
